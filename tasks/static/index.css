@@ -1,0 +1,17 @@
+ul{
+    list-style: none;
+    text-align: center;
+    width: 100%;
+}
+ul li{
+    font-size: 18px;
+    padding: 15px;
+}
+ul li a {
+    text-decoration: none;
+    color: brown;
+    font-weight: 600;
+}
+ul li a:hover{
+    color: black;
+}

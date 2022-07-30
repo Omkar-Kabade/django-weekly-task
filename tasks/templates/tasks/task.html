@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block page_title %} {{day}} {% endblock  %}
+{% block cssFile %}
+    <link rel = "stylesheet" href="{% static 'tasks.css' %}">
+    <link rel = "stylesheet" href="{% static 'includes/header.css' %}">
+{% endblock  %}
+{% block content %}
+{% include "tasks/includes/header.html" with active_page="Tasks"%}
+
+    <h1> {{day | title}} Task</h1>
+    <p> {{task}} </p>    
+
+{% endblock  %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block page_title %}All Tasks{% endblock  %}
+
+{% block cssFile %}
+    <link rel = "stylesheet" href="{% static 'index.css' %}">
+    <link rel = "stylesheet" href="{% static 'includes/header.css' %}">
+{% endblock  %}
+
+{% block content %}
+{% include "tasks/includes/header.html" with active_page="Index"%}
+
+    <ul> 
+        
+        {% for day in days %}
+            <li><a href=" {% url 'week-day' day %} " > {{day | title}} </a>
+
+        {% endfor %}
+
+    </ul
+
+{% endblock  %}
+
